@@ -1,23 +1,18 @@
 package com.awp.movieapp.api
 
+import com.awp.movieapp.data.MovieDetailResponse
+import io.reactivex.Single
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface ApiInterface {
 
-    @GET("movielist.json")
-//    fun getAllMovies() : Call<List<Movie>>
-
-    companion object {
-        var apiInterface: ApiInterface? = null
-
-        fun getInstance() : ApiInterface {
-            if(apiInterface == null) {
-                val retrofit = Retrofit.Builder()
-                    .baseUrl("")
-            }
-        }
-    }
+    @GET("movie/{movie_id}")
+    fun getDetailMovies(
+        @Path("movie_id")
+        id: Int
+    ) : Single<MovieDetailResponse>
 
 }
