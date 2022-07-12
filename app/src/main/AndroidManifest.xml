@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieApp">
         <activity
-            android:name=".single_movie_detail.SingleMovie"
+            android:name="com.awp.movieapp.ui.single_movie_detail.SingleMovie"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.popular_movie.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

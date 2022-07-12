@@ -1,4 +1,4 @@
-package com.awp.movieapp.single_movie_detail
+package com.awp.movieapp.ui.single_movie_detail
 
 import androidx.lifecycle.LiveData
 import com.awp.movieapp.api.ApiInterface
